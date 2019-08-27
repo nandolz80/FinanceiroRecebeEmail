@@ -9,7 +9,7 @@ class BuscarEmailAPI
     public function getMail()
     {
         $client = new \GuzzleHttp\Client();
-        $res = $client->get('http://localhost:8001/api/email/receiver');
+        $res = $client->get(env('URL_API'));
         //return $res->getStatusCode(); // 200
         return $res->getBody();
     }

@@ -31,15 +31,10 @@ function adicionaEmailNaTabela(emails) {
 function montaTr(email) {
     var emailTr = document.createElement("tr");
 
-    var nomeTd = montaTd(email.nome);
-    var enderecoTd = montaTd(email.endereco);
-    var valorTd = montaTd(email.valor);
-    var vencimentoTd = montaTd(email.vencimento);
-
-    emailTr.appendChild(nomeTd);
-    emailTr.appendChild(enderecoTd)
-    emailTr.appendChild(valorTd)
-    emailTr.appendChild(vencimentoTd)
+    emailTr.appendChild(montaTd(email.nome));
+    emailTr.appendChild(montaTd(email.endereco))
+    emailTr.appendChild(montaTd(email.valor))
+    emailTr.appendChild(montaTd(email.vencimento))
 
     return emailTr;
 }
